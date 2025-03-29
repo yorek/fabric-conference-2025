@@ -13,6 +13,7 @@ You need to have an embedding model deployed in Azure OpenAI and then make sure 
 - `$OPENAI_URL$`: for example, *https://my-ai-test.openai.azure.com*
 - `$OPENAI_KEY$`: for example, *1234567890abcdef1234567890abcdef*
 - `$OPENAI_EMBEDDING_DEPLOYMENT_NAME$`: for example, *text-embedding-3-small*
+- `$AIVISION_URL$`: for example, *https://my-ai-test.cognitiveservices.azure.com*
 
 ## Retrieval Augemented Generation sample
 

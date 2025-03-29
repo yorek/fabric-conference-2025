@@ -20,17 +20,3 @@ from
 order by
     distance
 go
-
-declare @e vector(1024)
-declare @retval int, @error nvarchar(max);
-exec [dbo].[get_multimodal_embedding] 'https://www.rd.com/wp-content/uploads/2023/05/GettyImages-1341465008.jpg', 'image', @e output, @error output;
-select @e, @error
-go
-
-
-declare @e vector(1536)
-declare @retval int, @error nvarchar(max);
-exec @retval = dbo.get_embedding 'focaccia', @e output, @error output; if @retval != 0 select @retval, @error;
-select  @e
-go
-
