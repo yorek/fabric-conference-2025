@@ -1,5 +1,7 @@
 # Fabric Conference 2025
 
+## Workshop "Building AI applications with SQL: Ground to Cloud to Fabric"
+
 Demos and samples used a Fabric Conference 2025 Workshop "Building AI applications with SQL: Ground to Cloud to Fabric".
 
 You can use the scripts in this folder to have an introduction to vectors in Azure SQL, embeddings and similarity search.
@@ -21,3 +23,7 @@ Azure Vision AI (needed for [Multimodal Embeddings](https://learn.microsoft.com/
 
 - `$CONTENTSAFETY_URL$`: for example, *https://my-cs-test.cognitiveservices.azure.com*
 - `$CONTENTSAFETY_KEY$`: for example, *1234567890abcdef1234567890abcdef*
+
+## Session "Operational RAG Solutions with Azure SQL and Microsoft Fabric"
+
+The session showed how to build an operational RAG solution using Azure SQL and Microsoft Fabric. The application built is the one you can find here: https://github.com/yorek/azure-sql-db-ai-samples-search
