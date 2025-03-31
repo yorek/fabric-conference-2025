@@ -1,47 +1,23 @@
 # Fabric Conference 2025
 
-Demos used a Fabric Conference 2025
-
-WORK IN PROGRESS
-
-## Vector 101
+Demos and samples used a Fabric Conference 2025 Workshop "Building AI applications with SQL: Ground to Cloud to Fabric".
 
 You can use the scripts in this folder to have an introduction to vectors in Azure SQL, embeddings and similarity search.
 
 You need to have an embedding model deployed in Azure OpenAI and then make sure to replace the following placeholder you'll find in the scripts, with the correct values for your deployment:
 
+[Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/):
+
 - `$OPENAI_URL$`: for example, *https://my-ai-test.openai.azure.com*
 - `$OPENAI_KEY$`: for example, *1234567890abcdef1234567890abcdef*
 - `$OPENAI_EMBEDDING_DEPLOYMENT_NAME$`: for example, *text-embedding-3-small*
-- `$AIVISION_URL$`: for example, *https://my-ai-test.cognitiveservices.azure.com*
 
-## Retrieval Augemented Generation sample
+Azure Vision AI (needed for [Multimodal Embeddings](https://learn.microsoft.com/azure/ai-services/computer-vision/how-to/image-retrieval?tabs=csharp) sample):
 
-A practical sample of RAG pattern applied to a real-world use case: make finding samples using Azure SQL easier and more efficient!
+- `$AIVISION_URL$`: for example, *https://my-vision-test.cognitiveservices.azure.com*
+- `$AIVISION_KEY$`: for example, *1234567890abcdef1234567890abcdef*
 
-https://github.com/yorek/azure-sql-db-ai-samples-search
+[Azure Content Safety](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview):
 
-The script used to add the present sample to the samples available to the AI Search demo is the following:
-
-```sql
-exec dbo.add_sample '
-{
-    "name": "Live360 2024 Orlando Demos", 
-    "description": "Demos used at the Live360 2024 Orlando conference",
-    "notes": "",
-    "url": "https://github.com/yorek/live360-2024-orlando",
-    "details": {
-        "authors": ["Davide Mauri"],
-        "languages": ["T-SQL", ".NET", "C#"],                
-        "services": ["Azure SQL"],
-        "conferences": ["Live360 2024 Orlando"]
-    }
-}
-';
-```
-
-## RAG + NL2SQL sample
-
-Using Azure SQL and Semantic Kernel to chat with your own data using a mix of NL2SQL and RAG
-
-https://github.com/Azure-Samples/azure-sql-db-chat-sk
+- `$CONTENTSAFETY_URL$`: for example, *https://my-cs-test.cognitiveservices.azure.com*
+- `$CONTENTSAFETY_KEY$`: for example, *1234567890abcdef1234567890abcdef*

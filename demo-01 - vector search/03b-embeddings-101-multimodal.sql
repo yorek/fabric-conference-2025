@@ -1,3 +1,7 @@
+/*
+    Generate save embeddings from *images*
+*/
+
 drop table if exists #animals;
 create table #animals(id int not null primary key, animal varchar(100), embedding vector(1024))
 go

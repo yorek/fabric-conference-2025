@@ -1,3 +1,6 @@
+/*
+    Generate and compare text embeddings
+*/
 declare @retval int, @error nvarchar(max);
 
 declare 
@@ -9,6 +12,11 @@ exec @retval = dbo.get_embedding 'dog', @dog output, @error output; if @retval !
 exec @retval = dbo.get_embedding 'cat', @cat output, @error output; if @retval != 0 select @retval, @error;
 exec @retval = dbo.get_embedding 'wolf', @wolf output, @error output; if @retval != 0 select @retval, @error;
 
+-- How a dog looks like as an embedding?
+select @dog;
+
+-- Calculate distance between dog, cat and wolf embeddings
+-- to get semantic distance (or similarity)
 select
     *
 from    

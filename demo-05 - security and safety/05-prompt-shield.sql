@@ -4,9 +4,9 @@ declare @payload nvarchar(max) = N'{
 }';
 
 exec @ret = sp_invoke_external_rest_endpoint
-    @url =  N'https://mladscontentsafety.cognitiveservices.azure.com/contentsafety/text:detectJailbreak?api-version=2024-02-15-preview',
+    @url =  N'$CONTENTSAFETY_URL$/contentsafety/text:detectJailbreak?api-version=2024-02-15-preview',
     @method = 'POST',
-    @credential = [https://mladscontentsafety.cognitiveservices.azure.com],
+    @credential = [$CONTENTSAFETY_URL$],
     @payload = @payload,
     @response = @response output;
 

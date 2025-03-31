@@ -4,14 +4,14 @@ begin
 end
 go
 
-if exists(select * from sys.[database_scoped_credentials] where name = '$OPENAI_URL$')
+if exists(select * from sys.[database_scoped_credentials] where name = '$CONTENTSAFETY_URL$')
 begin
-	drop database scoped credential [$OPENAI_URL$];
+	drop database scoped credential [$CONTENTSAFETY_URL$];
 end
 go
 
-create database scoped credential [$OPENAI_URL$]
---with identity = 'HTTPEndpointHeaders', secret = '{"api-key":"$OPENAI_KEY$"}';
+create database scoped credential [$CONTENTSAFETY_URL$]
+--with identity = 'HTTPEndpointHeaders', secret = '{"api-key":"$CONTENTSAFETY_KEY$"}'; -- best pratice is to use Managed Identity if you can
 with identity = 'Managed Identity', secret = '{"resourceid":"https://cognitiveservices.azure.com"}';
 go
 
