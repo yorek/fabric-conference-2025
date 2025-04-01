@@ -27,3 +27,7 @@ Azure Vision AI (needed for [Multimodal Embeddings](https://learn.microsoft.com/
 ## Session "Operational RAG Solutions with Azure SQL and Microsoft Fabric"
 
 The session showed how to build an operational RAG solution using Azure SQL and Microsoft Fabric. The application built is the one you can find here: https://github.com/yorek/azure-sql-db-ai-samples-search
+
+Another Agentic RAG applications, more complex and powerful, is available here:
+
+https://github.com/Azure-Samples/azure-sql-db-chat-sk
